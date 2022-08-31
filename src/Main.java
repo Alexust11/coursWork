@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 
 public class Main {
 
@@ -18,12 +18,9 @@ public class Main {
         employee[9] = new Employee("Пономарев", "Игорь", "Анатольевич", 4, 48000);
 
 
-
-
-
-        for (int i = 0; i < employee.length; i++)
-            if (employee[i] != null) {
-                System.out.println(employee[i].getId()) ;
+        for (Employee value : employee)
+            if (value != null) {
+                System.out.println(value.getId());
             }
 
 
