@@ -18,10 +18,10 @@ public class Main {
         employee[9] = new Employee("Пономарев", "Игорь", "Анатольевич", 4, 48000);
 
 
-        for (Employee value : employee)
-            if (value != null) {
-                System.out.println(value.getId());
-            }
+            for (int i = 0; i < employee.length; i++) {
+            System.out.println(employee[i].toString());
+        }
+
 
 
 

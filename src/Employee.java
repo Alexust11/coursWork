@@ -5,7 +5,7 @@ public class Employee {
     private int department; // отдел
     private int wages;// заработная плата
 
-    public static int counter=0;
+    public static int counter=1;
 
     private synchronized static int nextCounter() {
         return counter++;
@@ -37,17 +37,13 @@ public class Employee {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
     public String getPatronymic() {
         return patronymic;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
+
 
     public int getDepartment() {
         return department;
@@ -69,7 +65,10 @@ public class Employee {
         return id;
     }
 
+    public String toString() {
+        return "Запись № "+ this.getId() + " :" + this.getSurName() + " " + this.getName() + " " + this.getPatronymic() + ". Отдел № " + this.getDepartment() + ".   З/П-" + this.getWages()+" руб.";
 
+    }
 
 }
 
