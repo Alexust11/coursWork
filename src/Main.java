@@ -1,6 +1,37 @@
 
 
 public class Main {
+    private static String min(Employee[] employee) {
+        int minWages=employee[1].getWages();
+        int number=0;
+        for (int i = 1; i < employee.length; i++) {
+            if (employee[i].getWages() < minWages) {
+                minWages=employee[i].getWages();
+                number=i;
+            }
+        }
+        return "Сотрудник с минимальной зарплатой: "+employee[number].getSurName()+" "+ employee[number].getName()+" "+employee[number].getPatronymic();
+
+    }
+    private static String max(Employee[] employee) {
+        int maxWages = employee[1].getWages();
+        int number = 0;
+        for (int i = 1; i < employee.length; i++) {
+            if (employee[i].getWages() > maxWages) {
+                maxWages = employee[i].getWages();
+                number = i;
+            }
+        }
+        return "Сотрудник с максимальной зарплатой: " + employee[number].getSurName() + " " + employee[number].getName() + " " + employee[number].getPatronymic();
+    }
+        public static int suma(Employee[] employee) {
+        int s = 0;
+        for (int i = 0; i < employee.length; i++) {
+            s += employee[i].getWages();
+        }
+        return s;
+    }
+//
 
     public static void main(String[] args) {
 
@@ -18,12 +49,21 @@ public class Main {
         employee[9] = new Employee("Пономарев", "Игорь", "Анатольевич", 4, 48000);
 
 
-            for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i].toString());
+        for (int i = 0; i < employee.length; i++) { System.out.println(employee[i].toString());}
+
+        System.out.println("Сумма затрат на зарплаты в месяц= "+ suma(employee)+ " руб.");
+
+        System.out.println(min(employee));
+
+        System.out.println(max(employee));
+
+        double averageSalary=suma(employee)/employee.length;
+        System.out.println("Средняя заработная плата сотрудников= "+averageSalary+ " руб");
+
+        for (int i = 0; i < employee.length; i++) {
+            System.out.println(employee[i].getSurName()+" "+employee[i].getName()+" "+employee[i].getPatronymic());
         }
-
-
-
-
     }
+
+
 }
