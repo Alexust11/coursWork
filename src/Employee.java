@@ -10,16 +10,17 @@ public class Employee {
 //        this.employee = employee;
 //    }
 
-    public static int counter=1;
+    private static int counter=1;
 
-    private synchronized static int nextCounter() {
-        return counter++;
-    }
+    //private synchronized static int nextCounter()
+//    {
+//        return counter++;
+//    }
     public final int id;
 
-    {
-        id = nextCounter();
-    }
+//    {
+//        id = nextCounter();
+//    }
 
     public Employee(String surName, String name, String patronymic, int department, int wages) {
         this.surName = surName;
@@ -27,6 +28,7 @@ public class Employee {
         this.patronymic = patronymic;
         this.department = department;
         this.wages = wages;
+        id=counter++;
 
     }
 
