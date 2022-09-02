@@ -1,17 +1,19 @@
 public class Employee {
-   public static Employee[] employee=new Employee[10];
-    private final String surName;// фамилия
-    private final String name;// имя
-    private final String patronymic; //отчество
+    private   Employee[] employee;
+    private String surName;// фамилия
+    private  String name;// имя
+    private  String patronymic; //отчество
     private int department; // отдел
     private float wages;// заработная плата
 
-
+    public Employee(Employee[] employee) {
+        this.employee = employee;
+    }
 
     private static int counter=1;
 
 
-    public final int id;
+    public  int id;
 
 
     public Employee(String surName, String name, String patronymic, int department, float wages) {
