@@ -4,7 +4,7 @@ public class Employee {
     private final String name;// имя
     private final String patronymic; //отчество
     private int department; // отдел
-    private int wages;// заработная плата
+    private float wages;// заработная плата
 
 
 
@@ -14,7 +14,7 @@ public class Employee {
     public final int id;
 
 
-    public Employee(String surName, String name, String patronymic, int department, int wages) {
+    public Employee(String surName, String name, String patronymic, int department, float wages) {
         this.surName = surName;
         this.name = name;
         this.patronymic = patronymic;
@@ -50,11 +50,11 @@ public class Employee {
         this.department = department;
     }
 
-    public int getWages() {
+    public float getWages() {
         return wages;
     }
 
-    public void setWages(int wages) {
+    public void setWages(float wages) {
         this.wages = wages;
     }
 
