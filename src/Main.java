@@ -10,7 +10,7 @@ public class Main {
                 number = i;
             }
         }
-        return "Сотрудник с минимальной зарплатой: " + Employee.employee[number].getSurName() + " " + Employee.employee[number].getName() + " " + Employee.employee[number].getPatronymic();
+        return Employee.employee[number].getSurName() + " " + Employee.employee[number].getName() + " " + Employee.employee[number].getPatronymic();
 
     }
 
@@ -23,7 +23,7 @@ public class Main {
                 number = i;
             }
         }
-        return "Сотрудник с максимальной зарплатой: " + Employee.employee[number].getSurName() + " " + Employee.employee[number].getName() + " " + Employee.employee[number].getPatronymic();
+        return Employee.employee[number].getSurName() + " " + Employee.employee[number].getName() + " " + Employee.employee[number].getPatronymic();
     }
 
     public static int suma() {
@@ -35,17 +35,23 @@ public class Main {
     }
 
     //
-    public static double averageSalary() {
-        double sred = suma() / Employee.employee.length;
-        return sred;
+    public static double averageSalary() // средняя заработная плата
+    {
+        return suma() / Employee.employee.length;
     }
 
-    public static void  outputRecords() {
+    public static void  outputFullRecords() //Вывод полной информации по записям
+    {
         for (int i = 0; i < Employee.employee.length; i++) {
             System.out.println(Employee.employee[i].toString());
         }
     }
-
+    public static void  outputFio()//Вывод только фио работников
+    {
+        for (int i = 0; i < Employee.employee.length; i++) {
+            System.out.println(Employee.employee[i].getSurName()+" "+Employee.employee[i].getName()+" "+Employee.employee[i].getPatronymic());
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -64,18 +70,17 @@ public class Main {
 
 
 
-        outputRecords();
+        outputFullRecords();
         System.out.println("__________________________________________");
 
         System.out.println("Сумма затрат на зарплаты в месяц= "+ suma()+ " руб.");
-        System.out.println(min());
-        System.out.println(max());
+        System.out.println("Сотрудник с минимальное зарплатой: "+min());
+        System.out.println("Сотрудник с максимальной зарплатой: "+max());
         System.out.println("__________________________________________");
         System.out.println("Средняя заработная плата сотрудников= "+averageSalary()+ " руб");
         System.out.println("__________________________________________");
-        for (int i = 0; i < Employee.employee.length; i++) {
-            System.out.println(Employee.employee[i].getSurName()+" "+Employee.employee[i].getName()+" "+Employee.employee[i].getPatronymic());
-        }
+        outputFio();
+
     }
 
 

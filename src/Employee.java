@@ -1,26 +1,18 @@
 public class Employee {
-    public static Employee[] employee=new Employee[10];
+   public static Employee[] employee=new Employee[10];
     private String surName;// фамилия
     private String name;// имя
     private String patronymic; //отчество
     private int department; // отдел
     private int wages;// заработная плата
 
-//    public Employee(Employee[] employee) {
-//        this.employee = employee;
-//    }
+
 
     private static int counter=1;
 
-    //private synchronized static int nextCounter()
-//    {
-//        return counter++;
-//    }
+
     public final int id;
 
-//    {
-//        id = nextCounter();
-//    }
 
     public Employee(String surName, String name, String patronymic, int department, int wages) {
         this.surName = surName;
@@ -36,9 +28,7 @@ public class Employee {
         return surName;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
-    }
+
 
     public String getName() {
         return name;
