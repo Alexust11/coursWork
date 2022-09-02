@@ -9,10 +9,10 @@ public class Employee {
 
 
 
-    private static int counter=1;
+    private static int counter=0;
 
 
-    public  int id;
+    private   int id;
 
 
     public Employee( String surName, String name, String patronymic, int department, float wages) {
