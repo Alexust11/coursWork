@@ -1,8 +1,8 @@
 public class Employee {
    public static Employee[] employee=new Employee[10];
-    private String surName;// фамилия
-    private String name;// имя
-    private String patronymic; //отчество
+    private final String surName;// фамилия
+    private final String name;// имя
+    private final String patronymic; //отчество
     private int department; // отдел
     private int wages;// заработная плата
 
