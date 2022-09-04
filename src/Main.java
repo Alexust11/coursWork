@@ -51,7 +51,7 @@ public class Main {
         System.out.println("__________________________________________");
         employeeBook.outtAllRecords();
         System.out.println("__________________________________________");
-        employeeBook.sortDepertmens();
+        employeeBook.sortDepartments();
 
 //            employee[4] = new Employee("Нилов", "Иннокентий", "Петрович", 3, 30000f);
 //            employee[5] = new Employee("Бобков", "Александр", "Степанович", 4, 43000f);

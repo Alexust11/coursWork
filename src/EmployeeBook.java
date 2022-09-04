@@ -266,7 +266,7 @@ public class EmployeeBook {
     }
 
 
-    public void sortDepertmens() {
+    public void sortDepartments() {
         int[] dep = new int[size];//временный массив для сех номеров отделов
         int count = 0;
         for (int i = 0; i < size; i++) {
