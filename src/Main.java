@@ -48,6 +48,8 @@ public class Main {
              System.out.println("__________________________________________");
             employeeBook.addEmployees("Свиноренко", "Николай", "Николаевич", 3, 50000f);
             employeeBook.outtAllRecords();
+            employeeBook.modernWages("Иванов", "Иван", "Иванович", 39000f);
+            employeeBook.modernDepartmens("Иванов", "Иван", "Иванович",3);
 //            employee[4] = new Employee("Нилов", "Иннокентий", "Петрович", 3, 30000f);
 //            employee[5] = new Employee("Бобков", "Александр", "Степанович", 4, 43000f);
 //            employee[7] = new Employee( "Раков", "Александр", "Юрьевич", 1, 66000f);
